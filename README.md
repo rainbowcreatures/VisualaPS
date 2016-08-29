@@ -19,12 +19,10 @@ You can also check out the wiki (still under construction at this point) http://
 - Create folder called "generator" inside your project folder, and place another JS filename with the same name like above, ie "com.rainbowcreatures.projectname.js" into it. This will be your Blockly "generator" file (this will generate the JavaScript sourcecode for your blocks).
 - Finally, in the root of your project folder, create a json descriptor file in the same format as all the folders / files above, ie "com.rainbowcreatures.projectname.json". This will describe your blocks project - the format of the file is currently:
 
-*{"author":"Your name", "version":"X.X", "title":"Project title", "blocks":[{"type":"com.rainbowcreatures.test.testBlock", "name":"Test block"}, {"type":"com.rainbowcreatures.test.anotherTestBlock", "name":"Another test block", ...}]}*
+```
+{"author":"Your name", "version":"X.X", "title":"Project title", "blocks":[{"type":"com.rainbowcreatures.test.testBlock", "name":"Test block"}, {"type":"com.rainbowcreatures.test.anotherTestBlock", "name":"Another test block", ...}]}
+```
 
 The "blocks" array needs to contain all the blocks type names you wish to include into the VisualaPS Blockly menu.
 
-After reloading VisualaPS panels the included blocks should appear under the "Plugins" left sidebar menu of the Blockly (visual code) panel. You should see something like:
-
-Plugins
-|___com.rainbowcreatures.projectname
-    |___ Your block
+After reloading VisualaPS panels the included blocks should appear under the "Plugins" left sidebar menu of the Blockly (visual code) panel.
