@@ -1,0 +1,5 @@
+.swipe {overflow: hidden;visibility: hidden;}
+.swipe-wrap {overflow: hidden;position: relative !important;}
+.swipe-wrap > div {float:left;width:100%;position: relative !important;overflow: hidden;}
+.current-word {	background: yellow;}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../js/util.js"></script>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/jqueryData.js"></script>
+  <script src="../js/CSInterface.js"></script>
+  <link href="css/style.css" media="all" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div id="html"/>
+
+<script>
+
+var DEBUG = false;
+
+loadJSX("json2.jsx");
+
+$(document).ready(function() {
+
+        // load the last saved html
+	$('#html').load('html.html', function() {
+		$.getScript("JS.js");
+	});        
+        // load the last saved html
+	$('#html').load('html.html', function() {
+		$.getScript("Blockly.js");
+	});        
+
+	if (!DEBUG) {
+		// listen for events from them
+		var csInterface = new CSInterface();				
+		csInterface.addEventListener( "com.rainbowcreatures.visualaProps.eventSendHTML", function(e) {	
+			var html = e.data;
+			$('#html').html(html);
+			csInterface.evalScript("saveFileContent('" + csInterface.getSystemPath(SystemPath.EXTENSION) + "/preview', 'html.html', " + JSON.stringify(html) + ")", function(result) {
+				location.reload(true);
+			});
+			
+		} );
+		csInterface.addEventListener( "com.rainbowcreatures.visualaProps.eventSendJS", function(e) {	
+			var JS = e.data;
+			csInterface.evalScript("saveFileContent('" + csInterface.getSystemPath(SystemPath.EXTENSION) + "/preview', 'Blockly.js', " + JSON.stringify(JS) + ")", function(result) {
+				location.reload(true);
+			});
+		} );
+
+	}
+});
+	
+</script>
+</body>
+</html>

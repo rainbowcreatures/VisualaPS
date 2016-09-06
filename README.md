@@ -1,6 +1,10 @@
 # VisualaPS
 
-Plugin blocks for VisualaPS. These blocks extend the basic blocks available in VisualaPS. 
+Plugin blocks and example projects for VisualaPS. 
+
+*Blocks*
+
+These blocks extend the basic blocks available in VisualaPS. 
 
 *Are you JS developer and interested in helping out non-developers to build apps directly in Photoshop?*
 Let me know so you can commit to this repo. Once VisualaPS goes out of alpha, a block market will become availabe with the possibility of commercial blocks for developers - you can make a headstart now by collaborating on this project.
