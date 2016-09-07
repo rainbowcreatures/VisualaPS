@@ -1,6 +1,8 @@
 # VisualaPS example projects
 
-*Are you JS developer and interested in helping out non-developers to build apps directly in Photoshop?*
-Submit your own projects!
+Submit your own VisualaPS projects! Please create an Issue first, describing your example project - only after your project is approved we'll take your pull request.
 
-To make this work, download the project(s) content into C:\Documents and Settings\<username>\Documents\VisualaPhotoshopProjects\.
+## Installing the example projects
+
+The projects must be unzipped into C:\Documents and Settings\<username>\Documents\VisualaPhotoshopProjects\
+
